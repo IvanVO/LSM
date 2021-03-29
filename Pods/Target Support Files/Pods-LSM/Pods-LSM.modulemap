@@ -1,0 +1,6 @@
+framework module Pods_LSM {
+  umbrella header "Pods-LSM-umbrella.h"
+
+  export *
+  module * { export * }
+}
