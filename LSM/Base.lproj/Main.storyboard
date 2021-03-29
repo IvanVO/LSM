@@ -1,0 +1,1128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MBp-tl-SAo">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="LSM" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2AW-Eu-WTM">
+                                <rect key="frame" x="20" y="414" width="374" height="40"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="cEy-Tc-u3v"/>
+                                    <constraint firstAttribute="width" constant="374" id="fox-9N-X7N"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9py-Hy-pzx">
+                                <rect key="frame" x="20" y="474" width="374" height="40"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="kYs-wT-tLI"/>
+                                    <constraint firstAttribute="height" constant="40" id="wxS-Rz-JFq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" textContentType="password"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bla-IH-mUT" customClass="RoundButton" customModule="LSM" customModuleProvider="target">
+                                <rect key="frame" x="94" y="537" width="227" height="50"/>
+                                <color key="backgroundColor" red="0.38431372549019605" green="0.5725490196078431" blue="0.60392156862745094" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="227" id="76E-iI-e8H"/>
+                                    <constraint firstAttribute="height" constant="50" id="db8-az-mCl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="17"/>
+                                <state key="normal" title="Iniciar sesión">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="24"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="presentLogInVC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="spr-Lu-Yk5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DWs-Q2-NfM">
+                                <rect key="frame" x="153" y="832" width="109" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="109" id="KuH-JC-ug8"/>
+                                    <constraint firstAttribute="height" constant="30" id="xZ1-24-m1k"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="17"/>
+                                <state key="normal" title="Crear cuenta">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="presentSignUpVC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bCB-Av-MIG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OLd-hK-cJt">
+                                <rect key="frame" x="94" y="595" width="227" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="227" id="EoB-5z-QXv"/>
+                                    <constraint firstAttribute="height" constant="30" id="uIo-f6-dJp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="17"/>
+                                <state key="normal" title="¿Olivdaste tu contraseña?">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lenguaje de Señas Mexicano" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bbr-YP-1Os">
+                                <rect key="frame" x="83" y="149" width="248" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="4co-gu-tW9"/>
+                                    <constraint firstAttribute="width" constant="202" id="fzv-7K-Rbl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.25490196078431371" green="0.25490196078431371" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="DWs-Q2-NfM" firstAttribute="top" secondItem="OLd-hK-cJt" secondAttribute="bottom" constant="256" id="1M8-H4-z9Z"/>
+                            <constraint firstItem="2AW-Eu-WTM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="KvC-zg-81T"/>
+                            <constraint firstItem="DWs-Q2-NfM" firstAttribute="top" secondItem="OLd-hK-cJt" secondAttribute="bottom" constant="256" id="MIc-42-URX"/>
+                            <constraint firstItem="9py-Hy-pzx" firstAttribute="top" secondItem="2AW-Eu-WTM" secondAttribute="bottom" constant="20" id="PcF-8k-I4H"/>
+                            <constraint firstItem="OLd-hK-cJt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="94" id="XIW-WQ-udc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bbr-YP-1Os" secondAttribute="trailing" constant="83" id="YQH-0T-YAg"/>
+                            <constraint firstItem="9py-Hy-pzx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="a6Z-9j-trH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OLd-hK-cJt" secondAttribute="trailing" constant="93" id="aP4-M7-Ufx"/>
+                            <constraint firstItem="bla-IH-mUT" firstAttribute="top" secondItem="9py-Hy-pzx" secondAttribute="bottom" constant="20" id="aaN-iv-IHq"/>
+                            <constraint firstItem="bbr-YP-1Os" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="83" id="b3P-uK-yve"/>
+                            <constraint firstItem="OLd-hK-cJt" firstAttribute="top" secondItem="bla-IH-mUT" secondAttribute="bottom" constant="6" id="bQK-Ap-hoM"/>
+                            <constraint firstItem="bla-IH-mUT" firstAttribute="top" secondItem="9py-Hy-pzx" secondAttribute="bottom" constant="20" id="cZc-dS-HLM"/>
+                            <constraint firstItem="OLd-hK-cJt" firstAttribute="top" secondItem="bla-IH-mUT" secondAttribute="bottom" constant="6" id="cot-Od-hn6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9py-Hy-pzx" secondAttribute="trailing" constant="20" id="dvP-gS-LuN"/>
+                            <constraint firstItem="bbr-YP-1Os" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="61" id="ePT-oC-oht"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2AW-Eu-WTM" secondAttribute="trailing" constant="20" id="kxC-qV-IAd"/>
+                            <constraint firstItem="bla-IH-mUT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="94" id="plW-cY-5Nd"/>
+                            <constraint firstItem="DWs-Q2-NfM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="153" id="qca-49-He5"/>
+                            <constraint firstItem="DWs-Q2-NfM" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="s1y-gu-yqd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bla-IH-mUT" secondAttribute="trailing" constant="93" id="uPC-OE-OlZ"/>
+                            <constraint firstItem="2AW-Eu-WTM" firstAttribute="top" secondItem="bbr-YP-1Os" secondAttribute="bottom" constant="220" id="ujp-MU-BtC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DWs-Q2-NfM" secondAttribute="trailing" constant="152" id="ypB-Jd-WQ3"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="1ei-1L-a26"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="2AW-Eu-WTM" id="s3R-bC-gLI"/>
+                        <outlet property="passwordTextField" destination="9py-Hy-pzx" id="zTe-uf-aG7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="757.97101449275374" y="528.34821428571422"/>
+        </scene>
+        <!--Curso-->
+        <scene sceneID="8Ql-mH-bBm">
+            <objects>
+                <viewController storyboardIdentifier="CourseVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="d2m-vf-9e9" customClass="CourseVC" customModule="LSM" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RcT-m1-3Yf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="2000"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uIe-RZ-mZn">
+                                <rect key="frame" x="0.0" y="44" width="414" height="1956"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="efn-gh-Ual" userLabel="Content View">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="2000"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lecciones" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="58N-O6-XAq">
+                                                <rect key="frame" x="20" y="8" width="374" height="65"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="28"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Introducción a LSM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tQq-vd-dPG">
+                                                <rect key="frame" x="20" y="151" width="374" height="65"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="25"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Alfabeto" translatesAutoresizingMaskIntoConstraints="NO" id="UrA-Zr-S1L">
+                                                <rect key="frame" x="97" y="231" width="58" height="44"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Alfabeto" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qCe-8K-QcV">
+                                                <rect key="frame" x="92" y="283" width="64" height="16"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="16"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bYy-yk-T7M" userLabel="Alfabeto" customClass="RoundButton" customModule="LSM" customModuleProvider="target">
+                                                <rect key="frame" x="90" y="231" width="74" height="74"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="60"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Señas de cortesía" translatesAutoresizingMaskIntoConstraints="NO" id="ngz-3R-63w" userLabel="Cortesía">
+                                                <rect key="frame" x="259" y="231" width="58" height="44"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cortesía" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1Tu-pk-nuD">
+                                                <rect key="frame" x="255" y="283" width="62" height="16"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="16"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y3M-UV-OQ6" userLabel="Cortesía" customClass="RoundButton" customModule="LSM" customModuleProvider="target">
+                                                <rect key="frame" x="255" y="231" width="74" height="74"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="60"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Numeros" translatesAutoresizingMaskIntoConstraints="NO" id="paW-kg-7Dl" userLabel="Números">
+                                                <rect key="frame" x="97" y="341" width="58" height="44"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Numeros" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fom-Cy-ujN">
+                                                <rect key="frame" x="90" y="387" width="69" height="16"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="16"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yc1-SY-UlC" userLabel="Numeros" customClass="RoundButton" customModule="LSM" customModuleProvider="target">
+                                                <rect key="frame" x="90" y="335" width="74" height="74"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="60"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Expresiones" translatesAutoresizingMaskIntoConstraints="NO" id="0no-6M-6SZ" userLabel="Expresiones">
+                                                <rect key="frame" x="259" y="341" width="58" height="44"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Expresiones" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K4u-PR-w9y">
+                                                <rect key="frame" x="240" y="387" width="91" height="16"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="16"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wF3-dg-1S7" userLabel="Expresiones" customClass="RoundButton" customModule="LSM" customModuleProvider="target">
+                                                <rect key="frame" x="240" y="335" width="96" height="74"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="60"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Información personal" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wyy-fj-Yh8" userLabel="Información personal">
+                                                <rect key="frame" x="20" y="444" width="374" height="65"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="25"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Pronombres" translatesAutoresizingMaskIntoConstraints="NO" id="5pj-Dm-PPq" userLabel="Pronombres">
+                                                <rect key="frame" x="97" y="524" width="58" height="44"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pronombres" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SGg-to-SkI" userLabel="Pronombres">
+                                                <rect key="frame" x="81" y="576" width="92" height="16"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="16"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eOv-mt-UnY" userLabel="Pronombres">
+                                                <rect key="frame" x="78" y="519" width="97" height="74"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </button>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Clasificador" translatesAutoresizingMaskIntoConstraints="NO" id="pbK-aN-Ans" userLabel="Clasificador">
+                                                <rect key="frame" x="263" y="524" width="58" height="44"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Clasificadores" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fST-Pl-9Lu" userLabel="Clasificador">
+                                                <rect key="frame" x="240" y="576" width="105" height="16"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="16"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XER-7R-hGX" userLabel="Clasificador">
+                                                <rect key="frame" x="237" y="519" width="111" height="74"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </button>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Calendario" translatesAutoresizingMaskIntoConstraints="NO" id="0G8-ZA-aoO" userLabel="Calendario">
+                                                <rect key="frame" x="97" y="629" width="58" height="44"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Calendario" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QTZ-gM-1vn" userLabel="Calendario">
+                                                <rect key="frame" x="86" y="675" width="83" height="16"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="16"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bOK-7b-YTS" userLabel="Calendario">
+                                                <rect key="frame" x="82" y="623" width="88" height="74"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </button>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Numeros" translatesAutoresizingMaskIntoConstraints="NO" id="bPu-Le-f74" userLabel="Numeros 2">
+                                                <rect key="frame" x="263" y="629" width="58" height="44"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Numeros 2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xNb-LA-Vki" userLabel="Numeros 2">
+                                                <rect key="frame" x="252" y="675" width="83" height="16"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="16"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uLN-Cv-hG6" userLabel="Numeros 2">
+                                                <rect key="frame" x="248" y="623" width="89" height="74"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </button>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Familia" translatesAutoresizingMaskIntoConstraints="NO" id="zdv-8u-5eB" userLabel="Familia">
+                                                <rect key="frame" x="95" y="731" width="60" height="55"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Familia" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mmm-EB-bD7" userLabel="Familia">
+                                                <rect key="frame" x="98" y="779" width="56" height="16"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="16"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TMe-1d-E84" userLabel="Familia">
+                                                <rect key="frame" x="86" y="733" width="78" height="69"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </button>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Profesiones" translatesAutoresizingMaskIntoConstraints="NO" id="ebc-xh-rvR" userLabel="Profesiones">
+                                                <rect key="frame" x="262" y="735" width="58" height="44"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Profesiones" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l5d-tg-81z" userLabel="Profesiones">
+                                                <rect key="frame" x="249" y="779" width="87" height="16"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="16"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ug-2c-1jK" userLabel="Profesiones">
+                                                <rect key="frame" x="249" y="733" width="89" height="74"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </button>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Ropa y colores" translatesAutoresizingMaskIntoConstraints="NO" id="Zh3-GC-4v4" userLabel="Ropa y colores">
+                                                <rect key="frame" x="95" y="838" width="58" height="44"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ropa y colores" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="izH-Jg-aFe" userLabel="Ropa y colores">
+                                                <rect key="frame" x="70" y="884" width="112" height="16"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="16"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eze-NW-Q3z" userLabel="Ropa y colores">
+                                                <rect key="frame" x="70" y="835" width="112" height="74"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </button>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Presentación personal" translatesAutoresizingMaskIntoConstraints="NO" id="BN5-vm-zR0" userLabel="Presentación personal">
+                                                <rect key="frame" x="263" y="838" width="60" height="44"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Presentación personal" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NYm-rH-NRi" userLabel="Presentación personal">
+                                                <rect key="frame" x="225" y="879" width="134" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="16"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="51x-uE-poz" userLabel="Presentación personal">
+                                                <rect key="frame" x="240" y="835" width="105" height="85"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Comunidad señante" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jj8-lM-1TF">
+                                                <rect key="frame" x="20" y="955" width="374" height="65"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="25"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Lugares" translatesAutoresizingMaskIntoConstraints="NO" id="BhP-Zc-bpR" userLabel="Lugares">
+                                                <rect key="frame" x="98" y="1035" width="58" height="44"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lugares" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b6m-Rk-3uI" userLabel="Lugares">
+                                                <rect key="frame" x="92" y="1081" width="63" height="23"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="16"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fzZ-r5-flK" userLabel="Lugares">
+                                                <rect key="frame" x="78" y="1030" width="91" height="74"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </button>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Animales" translatesAutoresizingMaskIntoConstraints="NO" id="3Ca-f3-up6" userLabel="Animales">
+                                                <rect key="frame" x="264" y="1035" width="58" height="44"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Animales" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8yO-mn-SrS" userLabel="Animales">
+                                                <rect key="frame" x="259" y="1081" width="75" height="23"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="16"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k5Y-Mp-9cA" userLabel="Animales">
+                                                <rect key="frame" x="251" y="1030" width="87" height="74"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </button>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Gramática" translatesAutoresizingMaskIntoConstraints="NO" id="7dn-CE-Duv" userLabel="Gramática">
+                                                <rect key="frame" x="95" y="1140" width="58" height="44"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Gramática" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kUd-kt-POB">
+                                                <rect key="frame" x="86" y="1186" width="78" height="16"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="16"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8jo-Dl-nhb" userLabel="Gramática">
+                                                <rect key="frame" x="83" y="1140" width="87" height="68"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </button>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Comida" translatesAutoresizingMaskIntoConstraints="NO" id="gcV-0h-9e5">
+                                                <rect key="frame" x="264" y="1140" width="58" height="44"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Comida" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="anC-xx-9A1">
+                                                <rect key="frame" x="262" y="1186" width="59" height="16"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="16"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gCx-Ds-A8g" userLabel="Comida">
+                                                <rect key="frame" x="255" y="1140" width="76" height="68"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </button>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Transportes" translatesAutoresizingMaskIntoConstraints="NO" id="Ng5-tK-bmy" userLabel="Transportes">
+                                                <rect key="frame" x="95" y="1244" width="58" height="44"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Transportes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZUi-jT-c7N">
+                                                <rect key="frame" x="79" y="1281" width="90" height="16"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="16"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ta7-bk-UFd" userLabel="Transportes">
+                                                <rect key="frame" x="79" y="1244" width="90" height="59"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </button>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Verbos" translatesAutoresizingMaskIntoConstraints="NO" id="MEI-ib-pS2" userLabel="Verbos">
+                                                <rect key="frame" x="257" y="1244" width="58" height="44"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Verbos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="awC-KF-zcU">
+                                                <rect key="frame" x="260" y="1281" width="52" height="16"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="16"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LAP-vZ-pH8" userLabel="Verbos">
+                                                <rect key="frame" x="241" y="1244" width="90" height="59"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </button>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Países y ciudades" translatesAutoresizingMaskIntoConstraints="NO" id="S0a-Qv-Q7W" userLabel="Países y ciudades">
+                                                <rect key="frame" x="179" y="1333" width="55" height="50"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Países y ciudades" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gvn-jH-ESv" userLabel="Países y ciudades">
+                                                <rect key="frame" x="164" y="1379" width="86" height="36"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="16"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cOr-2a-p3T" userLabel="Países y ciudades">
+                                                <rect key="frame" x="167" y="1333" width="83" height="86"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Me comunico en LSM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J7h-cl-c1U">
+                                                <rect key="frame" x="20" y="1454" width="374" height="65"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="25"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Estados y capitales" translatesAutoresizingMaskIntoConstraints="NO" id="hog-Ar-H2I">
+                                                <rect key="frame" x="98" y="1555" width="55" height="50"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Estados y capitales" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jgp-1g-mcK">
+                                                <rect key="frame" x="84" y="1607" width="85" height="33"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="16"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CKQ-Pc-sj3" userLabel="Estados y capitales">
+                                                <rect key="frame" x="77" y="1544" width="97" height="102"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </button>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CDMX" translatesAutoresizingMaskIntoConstraints="NO" id="GS6-Q9-HHK" userLabel="Ciudad de México">
+                                                <rect key="frame" x="258" y="1555" width="55" height="50"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ciudad de México" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FRl-Se-dkP" userLabel="Ciudad de México">
+                                                <rect key="frame" x="244" y="1607" width="85" height="33"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="16"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xf5-8N-XN7" userLabel="Ciudad de México">
+                                                <rect key="frame" x="237" y="1544" width="97" height="102"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </button>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Tiempo" translatesAutoresizingMaskIntoConstraints="NO" id="Yjh-In-Tpi">
+                                                <rect key="frame" x="98" y="1686" width="55" height="44"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tiempo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wQD-Su-lxz">
+                                                <rect key="frame" x="98" y="1728" width="58" height="16"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="16"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hZz-MZ-WNJ" userLabel="Tiempo">
+                                                <rect key="frame" x="86" y="1680" width="83" height="70"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </button>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Preguntas" translatesAutoresizingMaskIntoConstraints="NO" id="lvs-d9-tnT">
+                                                <rect key="frame" x="251" y="1685" width="57" height="47"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Preguntas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Hw-pc-4Sy">
+                                                <rect key="frame" x="243" y="1728" width="75" height="16"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="16"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uyR-OP-ryv" userLabel="Preguntas">
+                                                <rect key="frame" x="238" y="1680" width="83" height="70"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </button>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Verbos" translatesAutoresizingMaskIntoConstraints="NO" id="MxJ-mK-3T2" userLabel="Verbos 2">
+                                                <rect key="frame" x="98" y="1786" width="55" height="44"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Verbos 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lef-Ue-X3A">
+                                                <rect key="frame" x="92" y="1822" width="67" height="16"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="16"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z6h-iT-Ezu" userLabel="Verbos 2">
+                                                <rect key="frame" x="83" y="1786" width="90" height="59"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </button>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Lugares" translatesAutoresizingMaskIntoConstraints="NO" id="5mK-HK-Pfr" userLabel="Lugares 2">
+                                                <rect key="frame" x="249" y="1786" width="58" height="44"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lugares 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1gK-ri-JR2">
+                                                <rect key="frame" x="243" y="1822" width="74" height="16"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="16"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dTK-dS-5DT" userLabel="Lugares 2">
+                                                <rect key="frame" x="234" y="1786" width="90" height="59"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </button>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Gramática" translatesAutoresizingMaskIntoConstraints="NO" id="qJk-ud-kqF" userLabel="Gramática 2">
+                                                <rect key="frame" x="96" y="1881" width="58" height="44"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Gramática 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ycT-4M-bop">
+                                                <rect key="frame" x="78" y="1924" width="93" height="16"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="16"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qV9-Of-KZG" userLabel="Gramática 2">
+                                                <rect key="frame" x="72" y="1881" width="105" height="66"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </button>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Religiones" translatesAutoresizingMaskIntoConstraints="NO" id="1WT-aQ-Ymh">
+                                                <rect key="frame" x="249" y="1881" width="58" height="44"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Religiones" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2pZ-Gb-EM4" userLabel="Religiones">
+                                                <rect key="frame" x="243" y="1924" width="78" height="16"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="16"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k5k-z3-dOY" userLabel="Religiones">
+                                                <rect key="frame" x="238" y="1879" width="85" height="66"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.1450980392" green="0.1450980392" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="2000" id="mdJ-qN-qpg"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="efn-gh-Ual" secondAttribute="bottom" id="01x-lH-gSh"/>
+                                    <constraint firstItem="efn-gh-Ual" firstAttribute="top" secondItem="uIe-RZ-mZn" secondAttribute="top" id="0Aa-kc-2ge"/>
+                                    <constraint firstItem="efn-gh-Ual" firstAttribute="leading" secondItem="uIe-RZ-mZn" secondAttribute="leading" id="0aX-hA-W3q"/>
+                                    <constraint firstAttribute="trailing" secondItem="efn-gh-Ual" secondAttribute="trailing" id="E5s-hd-8WY"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="kgS-Mf-e3V"/>
+                        <color key="backgroundColor" red="0.14509803921568626" green="0.14509803921568626" blue="0.14509803921568626" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="uIe-RZ-mZn" firstAttribute="top" secondItem="kgS-Mf-e3V" secondAttribute="top" id="FTV-My-AFv"/>
+                            <constraint firstItem="uIe-RZ-mZn" firstAttribute="leading" secondItem="kgS-Mf-e3V" secondAttribute="leading" id="JGU-Cg-4Fd"/>
+                            <constraint firstAttribute="bottom" secondItem="uIe-RZ-mZn" secondAttribute="bottom" id="kko-nI-9W4"/>
+                            <constraint firstItem="efn-gh-Ual" firstAttribute="width" secondItem="RcT-m1-3Yf" secondAttribute="width" id="oJd-Is-Jaz"/>
+                            <constraint firstItem="uIe-RZ-mZn" firstAttribute="trailing" secondItem="kgS-Mf-e3V" secondAttribute="trailing" id="s96-d7-YNg"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Curso" image="Learn" id="Hz9-2f-wMA"/>
+                    <size key="freeformSize" width="414" height="2000"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RFs-RG-x3U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2107" y="1233"/>
+        </scene>
+        <!--Información-->
+        <scene sceneID="CZI-qa-4T3">
+            <objects>
+                <viewController storyboardIdentifier="InformationVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3p3-TX-qBD" customClass="InformationVC" customModule="LSM" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6cL-Ib-AeG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Seña" translatesAutoresizingMaskIntoConstraints="NO" id="9X4-0t-vD0">
+                                <rect key="frame" x="47" y="317" width="320" height="190"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fE0-gq-ZxS">
+                                <rect key="frame" x="20" y="219" width="374" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Phasellus purus est, vestibulum nec ligula in, vestibulum finibus lacus. Nullam eu viverra ipsum. Suspendisse vitae nibh mollis, maximus nisl vitae, tempus felis. </string>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fGw-uz-U9D">
+                                <rect key="frame" x="20" y="515" width="374" height="141"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Nam at odio ac neque condimentum lacinia vitae sed nisi. In nec mauris in nibh eleifend dapibus. Vestibulum eu elit quis sem semper mattis. Integer tincidunt dictum elit sit amet ultricies. Nullam turpis est, vulputate quis urna et, gravida interdum ante. Nunc ornare urna in nibh bibendum fringilla. Pellentesque quis porttitor felis.</string>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="vkt-dS-947">
+                                <rect key="frame" x="136" y="760" width="142" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="currentPageIndicatorTintColor" systemColor="systemBlueColor"/>
+                            </pageControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Información sobre LSM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xXy-nW-MXQ">
+                                <rect key="frame" x="20" y="96" width="374" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="25"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="xFa-Pg-PmU"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Información" image="Information" id="dJG-ra-6AJ"/>
+                    <navigationItem key="navigationItem" id="1qh-41-ZSb"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FTI-Hr-Eeh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2762.3188405797105" y="863.83928571428567"/>
+        </scene>
+        <!--Inicio-->
+        <scene sceneID="dnN-uq-oeK">
+            <objects>
+                <viewController storyboardIdentifier="HomeScreenVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="xXa-T1-6JE" customClass="HomeScreenVC" customModule="LSM" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Zde-MX-OWJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Progress circle" translatesAutoresizingMaskIntoConstraints="NO" id="ohj-jO-gvI" userLabel="Circulo de progreso">
+                                <rect key="frame" x="112" y="262" width="190" height="190"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ver progreso" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dAQ-bS-p0v">
+                                <rect key="frame" x="95" y="189" width="225" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="25"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gss-Gi-kQc" userLabel="Botón de progreso">
+                                <rect key="frame" x="112" y="262" width="190" height="190"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="NzG-hE-dNf"/>
+                        <color key="backgroundColor" red="0.14509803921568626" green="0.14509803921568626" blue="0.14509803921568626" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Inicio" image="Home" id="ls7-G3-Fnc"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RHN-pU-lYi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1444.9275362318842" y="863.83928571428567"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="gwb-fE-Lx3">
+            <objects>
+                <tabBarController storyboardIdentifier="UITabBarController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zhz-O1-16m" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="LAp-vP-pF8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="xXa-T1-6JE" kind="relationship" relationship="viewControllers" id="eXr-eA-lYY"/>
+                        <segue destination="d2m-vf-9e9" kind="relationship" relationship="viewControllers" id="wJB-Tu-aAk"/>
+                        <segue destination="3p3-TX-qBD" kind="relationship" relationship="viewControllers" id="DbT-id-kV8"/>
+                        <segue destination="zTJ-ty-kC4" kind="relationship" relationship="viewControllers" id="kej-a6-LF5"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4tL-Da-gEH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2399" y="141"/>
+        </scene>
+        <!--Sign UpVC-->
+        <scene sceneID="wpa-nC-kal">
+            <objects>
+                <viewController storyboardIdentifier="SignUpVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Omj-9f-2YE" customClass="SignUpVC" customModule="LSM" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="c6M-R4-xNZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre Completo" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="84v-BH-t8D">
+                                <rect key="frame" x="11" y="220.5" width="388" height="40"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="388" id="2s4-bQ-sHK"/>
+                                    <constraint firstAttribute="height" constant="40" id="aOB-et-biS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" textContentType="name"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IYN-g0-GxR">
+                                <rect key="frame" x="11" y="290.5" width="388" height="40"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="1Vn-ez-KdD"/>
+                                    <constraint firstAttribute="width" constant="388" id="k3P-bO-lXs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" textContentType="email"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ik6-2a-8Rq">
+                                <rect key="frame" x="11" y="500.5" width="383" height="40"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="383" id="S1X-e9-CMd"/>
+                                    <constraint firstAttribute="height" constant="40" id="bjW-52-Gn0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" textContentType="new-password"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirmar contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dcl-ls-xFx">
+                                <rect key="frame" x="11" y="570.5" width="383" height="40"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="ClU-Kn-3J3"/>
+                                    <constraint firstAttribute="width" constant="383" id="G7v-tY-t9S"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" textContentType="password"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Registrarse" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ama-wg-UaH">
+                                <rect key="frame" x="101" y="105" width="202" height="45.5"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="202" id="20g-v8-EGN"/>
+                                    <constraint firstAttribute="height" constant="45" id="iNY-M4-Yeh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Género:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="efP-rK-QBA">
+                                <rect key="frame" x="11" y="430.5" width="75" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="LgJ-e0-PlM"/>
+                                    <constraint firstAttribute="height" constant="40" id="hl8-2I-gYP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="m3I-KD-Epo">
+                                <rect key="frame" x="106" y="435.5" width="135" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="4XP-Eo-mBw"/>
+                                    <constraint firstAttribute="height" constant="31" id="G9E-yW-D89"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="M"/>
+                                    <segment title="F"/>
+                                    <segment title="Otro"/>
+                                </segments>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="selectedSegmentTintColor" red="0.38431372549019605" green="0.5725490196078431" blue="0.60392156862745094" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </segmentedControl>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Edad" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gXe-Vn-0Na">
+                                <rect key="frame" x="11" y="360.5" width="77" height="40"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Dso-7L-hBd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" textContentType="email"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Ya tienes una cuenta?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zYc-fd-ycV">
+                                <rect key="frame" x="61" y="828" width="176.5" height="30"/>
+                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZOx-bo-LvG" customClass="RoundButton" customModule="LSM" customModuleProvider="target">
+                                <rect key="frame" x="89" y="640.5" width="222" height="54"/>
+                                <color key="backgroundColor" red="0.38431372549019605" green="0.58823529411764708" blue="0.60392156862745094" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="227" id="AR0-HR-lct"/>
+                                    <constraint firstAttribute="height" constant="54" id="Ivx-Ne-2uW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="20"/>
+                                <state key="normal" title="Crear cuenta">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="24"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QyD-aK-xY1">
+                                <rect key="frame" x="244.5" y="827.5" width="113.5" height="30.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30.5" id="SYx-Ks-Act"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="15"/>
+                                <state key="normal" title="Inciar Sesión">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="backToLogInBtn:" destination="Omj-9f-2YE" eventType="touchUpInside" id="ZZw-Ap-ZKu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="zc1-1D-bQQ"/>
+                        <color key="backgroundColor" red="0.25490196078431371" green="0.25490196078431371" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ik6-2a-8Rq" firstAttribute="top" secondItem="efP-rK-QBA" secondAttribute="bottom" constant="30" id="0vB-fb-FRF"/>
+                            <constraint firstItem="m3I-KD-Epo" firstAttribute="leading" secondItem="efP-rK-QBA" secondAttribute="trailing" constant="15" id="3nT-hU-4e9"/>
+                            <constraint firstItem="zc1-1D-bQQ" firstAttribute="trailing" secondItem="QyD-aK-xY1" secondAttribute="trailing" constant="56" id="4Si-3M-10v"/>
+                            <constraint firstItem="IYN-g0-GxR" firstAttribute="leading" secondItem="zc1-1D-bQQ" secondAttribute="leading" constant="11" id="59m-mT-hcV"/>
+                            <constraint firstItem="zc1-1D-bQQ" firstAttribute="bottom" secondItem="zYc-fd-ycV" secondAttribute="bottom" constant="4" id="5bS-Ah-MK9"/>
+                            <constraint firstItem="zc1-1D-bQQ" firstAttribute="bottom" secondItem="QyD-aK-xY1" secondAttribute="bottom" constant="4" id="84H-jE-b2n"/>
+                            <constraint firstItem="zc1-1D-bQQ" firstAttribute="trailing" secondItem="ZOx-bo-LvG" secondAttribute="trailing" constant="103" id="DUb-QN-XlE"/>
+                            <constraint firstItem="IYN-g0-GxR" firstAttribute="top" secondItem="84v-BH-t8D" secondAttribute="bottom" constant="30" id="EdR-U4-MSX"/>
+                            <constraint firstItem="ama-wg-UaH" firstAttribute="top" secondItem="zc1-1D-bQQ" secondAttribute="top" constant="61" id="FmJ-6m-X8L"/>
+                            <constraint firstItem="m3I-KD-Epo" firstAttribute="top" secondItem="IYN-g0-GxR" secondAttribute="bottom" constant="105" id="Gho-Rr-6kX"/>
+                            <constraint firstItem="84v-BH-t8D" firstAttribute="top" secondItem="ama-wg-UaH" secondAttribute="bottom" constant="70" id="ICI-qS-h0K"/>
+                            <constraint firstItem="84v-BH-t8D" firstAttribute="leading" secondItem="zc1-1D-bQQ" secondAttribute="leading" constant="11" id="ITw-p5-LBz"/>
+                            <constraint firstItem="zYc-fd-ycV" firstAttribute="leading" secondItem="zc1-1D-bQQ" secondAttribute="leading" constant="61" id="Il6-9f-cJN"/>
+                            <constraint firstItem="efP-rK-QBA" firstAttribute="leading" secondItem="zc1-1D-bQQ" secondAttribute="leading" constant="11" id="K0M-mX-F09"/>
+                            <constraint firstItem="gXe-Vn-0Na" firstAttribute="leading" secondItem="zc1-1D-bQQ" secondAttribute="leading" constant="11" id="LCZ-A3-geR"/>
+                            <constraint firstItem="zc1-1D-bQQ" firstAttribute="trailing" secondItem="Dcl-ls-xFx" secondAttribute="trailing" constant="20" id="Mob-6Y-2y1"/>
+                            <constraint firstItem="Dcl-ls-xFx" firstAttribute="leading" secondItem="zc1-1D-bQQ" secondAttribute="leading" constant="11" id="PnN-7a-jrH"/>
+                            <constraint firstItem="ZOx-bo-LvG" firstAttribute="leading" secondItem="zc1-1D-bQQ" secondAttribute="leading" constant="89" id="QYZ-mE-tcm"/>
+                            <constraint firstItem="zc1-1D-bQQ" firstAttribute="trailing" secondItem="IYN-g0-GxR" secondAttribute="trailing" constant="15" id="Qbf-wZ-47P"/>
+                            <constraint firstItem="ama-wg-UaH" firstAttribute="leading" secondItem="zc1-1D-bQQ" secondAttribute="leading" constant="101" id="WEP-A8-jbY"/>
+                            <constraint firstItem="gXe-Vn-0Na" firstAttribute="top" secondItem="IYN-g0-GxR" secondAttribute="bottom" constant="30" id="ZWk-ul-mfU"/>
+                            <constraint firstItem="zc1-1D-bQQ" firstAttribute="trailing" secondItem="84v-BH-t8D" secondAttribute="trailing" constant="15" id="auE-BG-DGP"/>
+                            <constraint firstItem="ZOx-bo-LvG" firstAttribute="top" secondItem="Dcl-ls-xFx" secondAttribute="bottom" constant="30" id="cGt-No-cDC"/>
+                            <constraint firstItem="zc1-1D-bQQ" firstAttribute="trailing" secondItem="Ik6-2a-8Rq" secondAttribute="trailing" constant="20" id="fpA-ok-RbY"/>
+                            <constraint firstItem="zc1-1D-bQQ" firstAttribute="trailing" secondItem="gXe-Vn-0Na" secondAttribute="trailing" constant="326" id="hjQ-jF-Mv4"/>
+                            <constraint firstItem="QyD-aK-xY1" firstAttribute="top" secondItem="ZOx-bo-LvG" secondAttribute="bottom" constant="133" id="j7r-fu-69V"/>
+                            <constraint firstItem="QyD-aK-xY1" firstAttribute="leading" secondItem="zYc-fd-ycV" secondAttribute="trailing" constant="7" id="j8V-52-aCv"/>
+                            <constraint firstItem="zYc-fd-ycV" firstAttribute="top" secondItem="ZOx-bo-LvG" secondAttribute="bottom" constant="133.5" id="mP7-Xe-Ep2"/>
+                            <constraint firstItem="Ik6-2a-8Rq" firstAttribute="leading" secondItem="zc1-1D-bQQ" secondAttribute="leading" constant="11" id="rnM-Lz-bbv"/>
+                            <constraint firstItem="zc1-1D-bQQ" firstAttribute="trailing" secondItem="m3I-KD-Epo" secondAttribute="trailing" constant="173" id="suj-fv-Ai5"/>
+                            <constraint firstItem="zc1-1D-bQQ" firstAttribute="trailing" secondItem="ama-wg-UaH" secondAttribute="trailing" constant="111" id="trI-bG-EiD"/>
+                            <constraint firstItem="Dcl-ls-xFx" firstAttribute="top" secondItem="Ik6-2a-8Rq" secondAttribute="bottom" constant="30" id="usR-UB-hyR"/>
+                            <constraint firstItem="m3I-KD-Epo" firstAttribute="leading" secondItem="efP-rK-QBA" secondAttribute="trailing" constant="20" id="v46-Et-huq"/>
+                            <constraint firstItem="efP-rK-QBA" firstAttribute="top" secondItem="gXe-Vn-0Na" secondAttribute="bottom" constant="30" id="xIx-j7-GVM"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="puX-9x-fqy"/>
+                    <connections>
+                        <outlet property="ageTextField" destination="gXe-Vn-0Na" id="n3I-th-cdi"/>
+                        <outlet property="confirmPasswordTextField" destination="Dcl-ls-xFx" id="Ohl-E4-Zo3"/>
+                        <outlet property="emailTextField" destination="IYN-g0-GxR" id="c0e-dh-4XR"/>
+                        <outlet property="fullNameTextField" destination="84v-BH-t8D" id="bgs-Xz-xpe"/>
+                        <outlet property="passwordTextField" destination="Ik6-2a-8Rq" id="hM9-9b-u5z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ewt-Rd-kzj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="757.97101449275374" y="1208.7053571428571"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="IYf-mn-Wlg">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MBp-tl-SAo" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pEP-mf-Xy3">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="dnr-Ur-COH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cZw-wA-7sR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-152" y="529"/>
+        </scene>
+        <!--Configuración-->
+        <scene sceneID="gfu-op-VMi">
+            <objects>
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="zTJ-ty-kC4" customClass="SettingsVC" customModule="LSM" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="maf-iP-MKL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Configuración" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h7d-sf-2Vc">
+                                <rect key="frame" x="27" y="44" width="215" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="xpz-5b-xiK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Eliminar cuenta" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rdg-dY-bHX">
+                                <rect key="frame" x="126" y="741" width="163" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="D2j-wZ-Dxl"/>
+                                    <constraint firstAttribute="width" constant="163" id="Y8f-Qf-yfV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="18"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre completo de usuario" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YUv-gI-dT1">
+                                <rect key="frame" x="20" y="192" width="374" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="Cpp-pt-jW5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edad de usuario" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gbd-FN-EYy">
+                                <rect key="frame" x="20" y="222" width="158" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="158" id="gSE-2j-bG6"/>
+                                    <constraint firstAttribute="height" constant="20" id="vP6-6N-a0t"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qUP-Za-lvF">
+                                <rect key="frame" x="20" y="272" width="374" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Vlb-1A-ESW"/>
+                                    <constraint firstAttribute="width" constant="374" id="fyH-eE-b2I"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xu5-X3-OLW">
+                                <rect key="frame" x="20" y="342" width="374" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="bMd-yn-28f"/>
+                                    <constraint firstAttribute="height" constant="40" id="yAt-2g-boN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirmar nueva contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Ls-7w-5ax">
+                                <rect key="frame" x="20" y="412" width="374" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="YAf-NR-BoC"/>
+                                    <constraint firstAttribute="width" constant="374" id="z5D-hv-GqE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Odh-b8-yfx" customClass="RoundButton" customModule="LSM" customModuleProvider="target">
+                                <rect key="frame" x="96" y="482" width="222" height="54.5"/>
+                                <color key="backgroundColor" red="0.38431372549019605" green="0.58823529411764708" blue="0.60392156862745094" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="222" id="4QE-7a-7PW"/>
+                                    <constraint firstAttribute="height" constant="54.5" id="efI-KC-CgZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="20"/>
+                                <state key="normal" title="Aceptar">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="24"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Género de usuario" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FtP-Xt-PYE">
+                                <rect key="frame" x="186" y="222" width="208" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="GuR-zf-pn3"/>
+                                    <constraint firstAttribute="width" constant="208" id="hOx-00-OEL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="VJZ-FB-sOT"/>
+                        <color key="backgroundColor" red="0.1450980392" green="0.1450980392" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="VJZ-FB-sOT" firstAttribute="trailing" secondItem="FtP-Xt-PYE" secondAttribute="trailing" constant="20" id="2sw-dN-iLB"/>
+                            <constraint firstItem="Rdg-dY-bHX" firstAttribute="top" secondItem="Odh-b8-yfx" secondAttribute="bottom" constant="204.5" id="3GF-ga-z5g"/>
+                            <constraint firstItem="VJZ-FB-sOT" firstAttribute="bottom" secondItem="Rdg-dY-bHX" secondAttribute="bottom" constant="22" id="47v-9P-tad"/>
+                            <constraint firstItem="VJZ-FB-sOT" firstAttribute="trailing" secondItem="Rdg-dY-bHX" secondAttribute="trailing" constant="125" id="5N9-CB-lEQ"/>
+                            <constraint firstItem="Odh-b8-yfx" firstAttribute="top" secondItem="6Ls-7w-5ax" secondAttribute="bottom" constant="30" id="5W9-o5-lSZ"/>
+                            <constraint firstItem="h7d-sf-2Vc" firstAttribute="top" secondItem="VJZ-FB-sOT" secondAttribute="top" id="A14-Gf-NfW"/>
+                            <constraint firstItem="Rdg-dY-bHX" firstAttribute="top" secondItem="Odh-b8-yfx" secondAttribute="bottom" constant="204.5" id="CYI-zz-xa7"/>
+                            <constraint firstItem="VJZ-FB-sOT" firstAttribute="trailing" secondItem="qUP-Za-lvF" secondAttribute="trailing" constant="20" id="DRS-cs-rrU"/>
+                            <constraint firstItem="6Ls-7w-5ax" firstAttribute="top" secondItem="xu5-X3-OLW" secondAttribute="bottom" constant="30" id="Fqd-Pv-OGa"/>
+                            <constraint firstItem="gbd-FN-EYy" firstAttribute="top" secondItem="YUv-gI-dT1" secondAttribute="bottom" constant="10" id="HI1-eN-Npi"/>
+                            <constraint firstItem="YUv-gI-dT1" firstAttribute="leading" secondItem="VJZ-FB-sOT" secondAttribute="leading" constant="20" id="L5e-89-3pb"/>
+                            <constraint firstItem="VJZ-FB-sOT" firstAttribute="trailing" secondItem="YUv-gI-dT1" secondAttribute="trailing" constant="20" id="MRD-PJ-aBL"/>
+                            <constraint firstItem="h7d-sf-2Vc" firstAttribute="leading" secondItem="VJZ-FB-sOT" secondAttribute="leading" constant="27" id="MZS-qK-c6Q"/>
+                            <constraint firstItem="YUv-gI-dT1" firstAttribute="top" secondItem="h7d-sf-2Vc" secondAttribute="bottom" constant="98" id="TMW-KI-mt4"/>
+                            <constraint firstItem="6Ls-7w-5ax" firstAttribute="leading" secondItem="VJZ-FB-sOT" secondAttribute="leading" constant="20" id="ZdK-pE-Itq"/>
+                            <constraint firstItem="VJZ-FB-sOT" firstAttribute="trailing" secondItem="Odh-b8-yfx" secondAttribute="trailing" constant="96" id="ct5-Fz-eLt"/>
+                            <constraint firstItem="VJZ-FB-sOT" firstAttribute="trailing" secondItem="6Ls-7w-5ax" secondAttribute="trailing" constant="20" id="ecs-My-Deo"/>
+                            <constraint firstItem="qUP-Za-lvF" firstAttribute="top" secondItem="FtP-Xt-PYE" secondAttribute="bottom" constant="30" id="hH1-vT-4lt"/>
+                            <constraint firstItem="gbd-FN-EYy" firstAttribute="leading" secondItem="VJZ-FB-sOT" secondAttribute="leading" constant="20" id="jJg-eP-ael"/>
+                            <constraint firstItem="VJZ-FB-sOT" firstAttribute="trailing" secondItem="h7d-sf-2Vc" secondAttribute="trailing" constant="172" id="lbf-fq-6ML"/>
+                            <constraint firstItem="qUP-Za-lvF" firstAttribute="leading" secondItem="VJZ-FB-sOT" secondAttribute="leading" constant="20" id="nyC-Bz-jrU"/>
+                            <constraint firstItem="qUP-Za-lvF" firstAttribute="top" secondItem="gbd-FN-EYy" secondAttribute="bottom" constant="30" id="oBs-3r-zcQ"/>
+                            <constraint firstItem="qUP-Za-lvF" firstAttribute="top" secondItem="gbd-FN-EYy" secondAttribute="bottom" constant="30" id="oZC-cg-WUn"/>
+                            <constraint firstItem="xu5-X3-OLW" firstAttribute="leading" secondItem="VJZ-FB-sOT" secondAttribute="leading" constant="20" id="rSW-2b-oQB"/>
+                            <constraint firstItem="Rdg-dY-bHX" firstAttribute="leading" secondItem="VJZ-FB-sOT" secondAttribute="leading" constant="126" id="sq1-83-Egc"/>
+                            <constraint firstItem="xu5-X3-OLW" firstAttribute="top" secondItem="qUP-Za-lvF" secondAttribute="bottom" constant="30" id="vBB-us-8iZ"/>
+                            <constraint firstItem="YUv-gI-dT1" firstAttribute="top" secondItem="h7d-sf-2Vc" secondAttribute="bottom" constant="98" id="vZA-A4-Y3C"/>
+                            <constraint firstItem="VJZ-FB-sOT" firstAttribute="trailing" secondItem="xu5-X3-OLW" secondAttribute="trailing" constant="20" id="wyp-v5-e54"/>
+                            <constraint firstItem="FtP-Xt-PYE" firstAttribute="top" secondItem="YUv-gI-dT1" secondAttribute="bottom" constant="10" id="xT3-D0-958"/>
+                            <constraint firstItem="FtP-Xt-PYE" firstAttribute="top" secondItem="YUv-gI-dT1" secondAttribute="bottom" constant="10" id="xwI-M1-ikN"/>
+                            <constraint firstItem="Odh-b8-yfx" firstAttribute="leading" secondItem="VJZ-FB-sOT" secondAttribute="leading" constant="96" id="zCj-wc-r77"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Configuración" image="Settings" id="YNg-tr-LiM"/>
+                    <connections>
+                        <outlet property="confirmPasswordTextField" destination="6Ls-7w-5ax" id="QTu-4U-i4L"/>
+                        <outlet property="emailTextField" destination="qUP-Za-lvF" id="CBj-dn-Mko"/>
+                        <outlet property="passwordTextField" destination="xu5-X3-OLW" id="74r-uJ-BVM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CT5-jX-RPJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3444.9275362318845" y="863.83928571428567"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Alfabeto" width="85" height="85"/>
+        <image name="Animales" width="32" height="32"/>
+        <image name="CDMX" width="32" height="32"/>
+        <image name="Calendario" width="21" height="21"/>
+        <image name="Clasificador" width="21" height="21"/>
+        <image name="Comida" width="32" height="32"/>
+        <image name="Estados y capitales" width="33" height="33"/>
+        <image name="Expresiones" width="21" height="21"/>
+        <image name="Familia" width="33" height="33"/>
+        <image name="Gramática" width="32" height="32"/>
+        <image name="Home" width="16.5" height="16.5"/>
+        <image name="Information" width="16.5" height="16.5"/>
+        <image name="Learn" width="16.5" height="16.5"/>
+        <image name="Lugares" width="21" height="21"/>
+        <image name="Numeros" width="21" height="21"/>
+        <image name="Países y ciudades" width="33" height="33"/>
+        <image name="Preguntas" width="32" height="32"/>
+        <image name="Presentación personal" width="33" height="33"/>
+        <image name="Profesiones" width="32" height="32"/>
+        <image name="Progress circle" width="258.5" height="228"/>
+        <image name="Pronombres" width="21" height="21"/>
+        <image name="Religiones" width="32" height="32"/>
+        <image name="Ropa y colores" width="66.5" height="66.5"/>
+        <image name="Seña" width="341" height="204"/>
+        <image name="Señas de cortesía" width="21" height="21"/>
+        <image name="Settings" width="16.5" height="16.5"/>
+        <image name="Tiempo" width="32" height="32"/>
+        <image name="Transportes" width="32" height="32"/>
+        <image name="Verbos" width="32" height="32"/>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
