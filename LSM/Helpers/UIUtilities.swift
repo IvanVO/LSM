@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 class UIUtilities {
-    
+    // styling of text fields.
     static func styleTextField(_ textField:UITextField) {
         // Create the bottom line
         let bottomLine = CALayer()
@@ -26,6 +26,7 @@ class UIUtilities {
         textField.layer.addSublayer(bottomLine)
     }
     
+    // Creating an alert notification to disaply errors.
     static func errorAlertNotification(title:String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         
@@ -36,6 +37,7 @@ class UIUtilities {
         alert.present(alert, animated: true, completion: nil)
     }
     
+    // Specifying the parameters that a password has to meet so it is considered valid.
     static func isPasswordValid(_ password : String) -> Bool {
         
         let passwordTest = NSPredicate(format: "SELF MATCHES %@", "^(?=.*[a-z])(?=.*[$@$#!%*?&])[A-Za-z\\d$@$#!%*?&]{8,}")
