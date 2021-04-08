@@ -10,6 +10,7 @@ target 'LSM' do
   pod 'Firebase/Auth'
   pod 'Firebase/Core'
   pod 'Firebase/Firestore'
+  pod 'FirebaseFirestoreSwift'
 end
 
 post_install do |installer|
