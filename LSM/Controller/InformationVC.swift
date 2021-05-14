@@ -92,7 +92,7 @@ class InformationVC: UIViewController {
     // Setting up the page control
     lazy var pageControl:UIPageControl = {
         let pageControl = UIPageControl()
-        //pageControl.backgroundColor = .systemGray
+        
         pageControl.numberOfPages = views.count
         pageControl.currentPage = 0
         pageControl.currentPageIndicatorTintColor = .systemTeal
@@ -190,9 +190,6 @@ class InformationVC: UIViewController {
         }*/
         return button
     }
-    
-
-    
 }
 
 extension InformationVC: UIScrollViewDelegate {

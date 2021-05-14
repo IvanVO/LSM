@@ -182,7 +182,7 @@ class SettingsVC: UIViewController {
             
             let alert = UIAlertController(title: "¿Eliminar cuenta?", message: "Esta acción no es reversible. Presiona 'Eliminar Cuenta' para proceder o 'Cancelar' para abortar esta acción.", preferredStyle: .alert)
             
-            alert.addAction(UIAlertAction(title: "Canelar", style: .default, handler: nil))
+            alert.addAction(UIAlertAction(title: "Cancelar", style: .default, handler: nil))
             
             alert.addAction(UIAlertAction(title: "Eliminar Cuenta", style: .destructive, handler: {(_: UIAlertAction!) in
                 user.delete(completion: nil)

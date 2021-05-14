@@ -28,8 +28,6 @@ class CourseVC: UIViewController{
         
         let vc = self.storyboard?.instantiateViewController(identifier: "TemplateOneVC") as! TemplateOneVC
         self.navigationController?.pushViewController(vc, animated: true)
-
-        
     }
     
     @IBAction func courtesyLesson(_ sender: Any) {

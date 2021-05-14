@@ -16,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         UITabBar.appearance().barTintColor = .white
         UITabBar.appearance().tintColor = .systemBlue
+        
         FirebaseApp.configure()
         
         return true
